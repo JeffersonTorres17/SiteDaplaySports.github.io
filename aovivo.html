@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <title>Futebol Ao Vivo | DaPlay</title>
+    <style>
+        body {
+          background-color: black;
+          text-align: center;   
+        }      
+       
+    </style>
+  <script>
+    function alterarTexto() {
+      // Obtém o elemento do parágrafo
+      var paragrafo = document.getElementById("meuParagrafo");
+
+      // Obtém o texto atual do parágrafo
+      var textoAtual = paragrafo.textContent;
+
+      // Verifica se o parágrafo já foi alterado
+      if (textoAtual === "Ao Vivo em Breve") {
+        // Se ainda for o texto original, altera para "Novo Texto"
+        paragrafo.textContent = "Ao Vivo Agora";
+      } else {
+        // Se já foi alterado, restaura para o texto original
+        paragrafo.textContent = "Ao Vivo em Breve";
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar sticky-top bg-dark nav.eu " data-bs-theme="dark">
+    <div class="container-fluid" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button type="button" aria-expanded="false" data-bs-toggle="dropdown" class="btn btn-light"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg></button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="entrar.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-check" viewBox="0 0 16 16">
+                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+              </svg> Entrar</a></li>
+            <li><a class="dropdown-item" href="registro.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+              </svg> Registrar-se</a></li>
+            <li><a class="dropdown-item" href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+              </svg> Home</a></li>
+            <li><a class="dropdown-item" href="#">Transmita seus jogos aqui</a></li>
+            <li><a class="dropdown-item" href="#">Suporte</a></li>
+          </ul>
+          <div class="logo">
+            <h3>DaPlay Sports</h3>
+          </div>
+          <a type="button" class="btn btn-light position-relative" href="carrinho.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden"></span>
+            </span>
+          </a>
+    </div>
+  </nav>
+  <div class="geral">
+    <div class="yt">       
+        <div class="agora"> 
+          <div class="ball">            
+          </div>
+            <div class="vivo">
+              <h1>Ao vivo</h1>
+            </div>
+        </div>      
+      <div id="video-container">
+          <!-- O código do player incorporado será adicionado aqui -->
+      </div>
+      <script>
+          // Substitua 'YOUTUBE_VIDEO_ID' pelo ID do vídeo que deseja exibir
+          const videoId = "AMKx_v1gF3w";
+
+          // Crie o código de incorporação do YouTube
+          const embedCode = `<iframe
+              width="100%"
+              height="400"
+              src="https://www.youtube.com/embed/${videoId}"
+              frameborder="0"s
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+          ></iframe>`;
+          // Adicione o código de incorporação ao contêiner de vídeo
+          document.getElementById('video-container').innerHTML = embedCode;
+      </script>
+      <div id="live-score">
+        <div><h6>Placar </h6></div>
+        <div class="placar">
+          <div class="trapezoid-container">
+            <div class="trapezoid"></div>
+            <div class="timecasa"></div>
+              <div class="nomecasa">Brasil</div>          
+            <div class="overlay-text">-</div>
+            <div class="golcasa" id="gol_casa">2</div>
+            <div class="timevisitante"></div>
+            <div class="nomevisitante">Germany</div>
+            <div class="golvisitatne" id="gol_fora">2</div>          
+        </div>
+      <main>  
+          <!-- Exibição dos nomes dos times e do placar -->        
+          <script>
+              let time_casa = "Brasil"
+              let time_fora = "Germany"
+              // Atualize as informações do placar e dos nomes dos times aqui
+              function atualizarPlacar(placarA, placarB) {
+              // Atualiza o conteúdo da div do placar
+              const gol_casaElement = document.getElementById('gol_casa');
+              gol_casaElement.textContent = `${placarA}`;
+              const gol_foraElement = document.getElementById('gol_fora');
+              gol_foraElement.textContent = `${placarB}`;
+          }
+              // Criação do objeto EventSource para se conectar ao servidor
+              const eventSource = new EventSource('placarAtualizado.php');
+  
+              // Definindo o tratamento de eventos quando uma atualização ocorre
+              eventSource.addEventListener('message', function(event) {
+              const data = JSON.parse(event.data);
+              atualizarPlacar(data.placarA, data.placarB);
+              });
+              // Atualize as informações a cada 5 segundos (ou conforme necessário)
+              setInterval(atualizarExibicao, 5000);
+          </script>   
+    </div>
+    <div class="estatisticas">
+      <h4>ESTATISTICAS DO JOGO</h4>
+    </div>
+  </div>
+    <div class="logotime">
+      <img class="team-logo" src="Brasil.png" width="120px" alt="Logo Time 1"> 
+      <img class="team-logo" src="Alemanha.png" alt="Logo Time 1">
+
+    </div>
+    <div class="team-container">   
+      
+      <table class="team-table">
+          <thead>            
+            <th colspan="3">Brasil</th>
+              <tr>
+                  <th>Jogador</th>
+                  <th>Minuto</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>Daniel Pé de Ferro</td>
+                <td>15'</td> 
+              </tr>
+              <tr>
+                <td>Balão</td>
+                <td>65'</td> 
+              </tr>
+              <!-- Adicione mais linhas conforme necessário -->
+          </tbody>
+      </table>
+
+      <table class="team-table">
+          <thead>
+            <th colspan="3">Alemanha</th>
+              <tr>
+                  <th>Jogador</th>
+                  <th>Minuto</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Caixa D'Agua</td>
+                  <td>30'</td>
+              </tr>
+              <!-- Adicione mais linhas conforme necessário -->
+          </tbody>
+      </table>
+  </div>
+      </div>
+    </div>
+    
+    </nav>
+</body>
+</html>

@@ -1,0 +1,209 @@
+
+  @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+  }
+  .team-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+  }
+  .team-table {
+      width: 45%; /* Ajuste conforme necessário */
+      border-collapse: collapse;
+      margin: 0 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-table th, .team-table td {
+      background-color: #3498db;
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+  }
+  .ball {
+      margin-top: 10px;
+      width: 30px;
+      height: 30px;
+      background-color: red;
+      border-radius: 50%;
+      animation: blink 1s infinite;
+  }
+  .yt {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    color: white;
+    justify-content: center;
+  }      
+  nav.eu{
+    color: black;
+  }
+  a.mostrar{
+    font-size: 30px;
+  }
+  #video-container {
+      max-width: 800px;
+      margin: 0 auto;
+  }
+  .ao-vivo {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  
+  .agora {         
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+  }
+  .logo{
+    font-family: "Roboto Slab", serif;
+    color: white;
+  }
+
+  .vivo{
+    display: flex;
+    padding-left: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 30px;
+  }
+
+  th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;      
+  }
+  .estatisticas {
+    padding-top: 40px;
+  }
+  .team-logo {
+      max-width: 80px; /* Ajuste conforme necessário */
+      max-height: 80px; /* Ajuste conforme necessário */
+      display: block;
+      margin: 0 auto 10px; /* Centraliza o logo e adiciona um pouco de espaço abaixo */
+  }
+  .logotime {
+    display: flex;
+  }  
+  .timeshoje {                                   
+    display: flex;         
+    width: 650px;
+    border-top: 50px solid red;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }        
+  .timecasa {
+    position: absolute;
+    width: 47%;          
+    transform: translate(-50%, -50%);
+    text-align: right;
+    justify-content: center;
+    align-items: center;
+  }
+  .versos {
+    width: 6%;
+  }
+  .timevisitante {
+    width: 47%;          
+    text-align: left;
+  } 
+  .trapezoid-container {
+      position: relative;
+      
+      width: 200px;
+      height: 100px;     
+      left: -255px;
+  }
+  .trapezoid {
+      border-top: 60px solid #28282B;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      height: 0;
+      width: 700px;
+      background: linear-gradient(to bottom, #3498db, #2980b9); /* Adiciona o degradê aqui */      
+    }
+  .overlay-text {
+      position: absolute;
+      text-align: center;
+      width: 50px;
+      height: 50%;
+      top: 30%;
+      transform: translate(330px, -50%);
+      color: white;
+      font-size: 35px;
+      border-radius: 5px;
+      background-color: red;
+  }
+  .timecasa {
+      position: absolute;
+      border-top: 60px solid red;
+      border-left: 30px solid transparent;
+      text-align: center;
+      width: 130%;
+      transform: translate(25px, -53px);
+      color: white;
+      font-size: 35px;
+      border-radius: 5px;
+  }
+  .nomecasa {
+      position: absolute;
+      text-align: center;
+      width: 140%;
+      height: 50%;
+      transform: translate(35px, -49px);
+      color: white;
+      font-size: 35px;
+      border-radius: 5px;
+  }
+  .golcasa {
+      position: absolute;
+      text-align: center;
+      width: 140%;
+      height: 50%;
+      transform: translate(168px, -55px);
+      color: white;
+      font-size: 35px;
+      border-radius: 5px;
+  }
+  .timevisitante {
+      position: absolute;
+      border-top: 60px solid red;
+      border-right: 30px solid transparent;
+      text-align: center;
+      width: 130%;
+      transform: translate(420px, -53px);
+      color: white;
+      font-size: 35px;
+      border-radius: 5px;
+  } 
+  .nomevisitante {
+      position: absolute;
+      text-align: center;
+      width: 140%;
+      height: 50%;
+      transform: translate(385px, -49px);
+      color: white;
+      font-size: 35px;
+      border-radius: 5px;
+  }
+  .golvisitatne {
+    position: absolute;
+      text-align: center;
+      width: 140%;
+      height: 50%;
+      transform: translate(260px, -55px);
+      color: white;
+      font-size: 35px;
+      border-radius: 5px;
+  }
+  .placar {
+    display: flex;
+    justify-content: center;
+  }

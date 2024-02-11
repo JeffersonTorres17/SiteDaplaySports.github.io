@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Placar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #placar {
+            font-size: 24px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Painel de Controle</h1>
+    <div id="placar">Atualizando...</div>
+    <!-- Botões para incrementar ou decrementar o placar -->
+    <button onclick="atualizarPlacar('A', 1)">Gol Time A</button>
+    <button onclick="atualizarPlacar('B', 1)">Gol Time B</button>
+
+    <br>
+
+    <button onclick="atualizarPlacar('A', -1)">-1 Time A</button>
+    <button onclick="atualizarPlacar('B', -1)">-1 Time B</button>
+
+    <!-- Exibição do placar -->
+    
+
+    <script>
+        let time_casa = "Brasil"
+        let time_fora = "Germany"
+        // Função para atualizar o placar
+        function atualizarPlacar(time, valor) {
+            // Enviar a atualização para o servidor (pode ser feito por AJAX ou WebSocket)
+            // Aqui, eu vou simular um envio para um servidor PHP (placarAtualizado.php)
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'placarAtualizado.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send(`time=${time}&valor=${valor}`);
+        }
+
+        // Criação do objeto EventSource para se conectar ao servidor
+        const eventSource = new EventSource('placarAtualizado.php');
+
+        // Definindo o tratamento de eventos quando uma atualização ocorre
+        eventSource.addEventListener('message', function(event) {
+            const data = JSON.parse(event.data);
+            // Atualiza o visual do placar na página 2
+            document.getElementById('placar').textContent = `${time_casa} ${data.placarA} - ${data.placarB} ${time_fora}`;
+        });
+    </script>
+</body>
+</html>
